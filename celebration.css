@@ -1,0 +1,128 @@
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Beautiful gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Celebration container */
+.container {
+    background: #fff8e1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #d81b60;
+    animation: pop 1.5s infinite;
+}
+
+/* Pop effect */
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+p {
+    font-size: 1.2rem;
+    color: #5d4037;
+    line-height: 1.6;
+}
+
+/* Celebration Button */
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #d81b60;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #ad1457;
+}
+
+/* Confetti and Hearts container */
+#confetti-container,
+#falling-hearts,
+#falling-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Confetti animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4081;
+    opacity: 1;
+    animation: confettiFall 10s linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+/* Falling Hearts */
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 1; /* Hearts remain fully visible */
+    animation: heartFall 10s linear forwards;
+}
+
+@keyframes heartFall {
+    0% {
+        transform: translateY(-100px) scale(1); /* Start slightly above the viewport */
+    }
+    100% {
+        transform: translateY(100vh) scale(1); /* Fall until out of view, no scale change */
+    }
+}
+
+/* Falling Flowers */
+.flower {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 1;
+    animation: flowerFall 10s linear forwards;
+}
+
+@keyframes flowerFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg) scale(1);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg) scale(1);
+    }
+}

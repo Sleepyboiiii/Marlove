@@ -1,0 +1,131 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message</title>
+    <link rel="stylesheet" href="landing.css">  <!-- Link to the CSS file -->
+
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Playfair Display', serif; /* Use Playfair Display for body text */
+            background: #fce4ec; /* Light pink background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background: #fff8e1; /* Soft parchment color */
+            padding: 2rem;
+            border: 1px solid #d7ccc8; /* Subtle border */
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            z-index: 2; /* Ensure the container is above the hearts */
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/old-wall.png'); /* Subtle paper texture */
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive; /* Use Great Vibes for the title */
+            text-align: center;
+            font-size: 3rem;
+            color: #d81b60;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #5d4037;
+            line-height: 1.6;
+            z-index: 1;
+        }
+
+        button {
+            display: block;
+            margin: 1.5rem auto 0;
+            padding: 0.8rem 1.5rem;
+            background: #d81b60;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #ad1457;
+        }
+
+        #fallingHearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1; /* Ensure hearts are behind the container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Dearest Mariam,</h1>
+        <p>
+            First of all, I deeply apologize for making you wait this long and thank you for waiting for something as meager as this. I am so very grateful to have someone like you by my side who supports and believes in me as much as you do. The me from 2 years ago would have never been able to fathom that someone who loves me like you do existed. You are the light in my darkness. You are the reason I want to be a better person when I wake up every day. You are the reason I always feel loved. You have made me become a better person without even realizing. I truly hope we stick together forever because I cannot even fathom being in a world that does not know your existence. You are the moon to my stars. You are the sugar to my coffee. You are the flame to my candle. You are the melody to my song. Without you, I am incomplete. Thank you for existing and making my world better (although you yourself are my world, my everything). Thank you for choosing me. Thank you for being the absolute sweetest to me. Thank you soooooooooooooo much for doing so much for me. No words could ever describe how thankful i am to you for being even better than what I deserve.I am so very proud of you my beauiful girl. I will forever be proud to call you my girl. You are such a beautiful and amazing person. Your beauty knows no bounds. Every day I find you more gorgeous than the day before. Every second that passes by I miss you more. Every second that passes by makes me yearn for you like you are the air that I need to survive. I am looking forward to spending my whole life with you. I love you so very much meri jaan.
+        </p>
+        <p>I just have one question to ask you...</p>
+        <button onclick="goToNextPage()">Click to See 💗</button>
+    </div>
+
+    <!-- Falling hearts container -->
+    <div id="fallingHearts"></div>
+
+    <!-- Link to your JavaScript -->
+    <script src="landing.js"></script>
+    <script>
+        function goToNextPage() {
+            window.location.href = "main.html"; // Redirect to the second page
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Valentine Website!</h1>
+    <p>This is the homepage.</p>
+    <a href="main.html">Go to Main Page</a>
+    <a href="celebration.html">Go to Celebration Page</a>
+</body>
+</html>
